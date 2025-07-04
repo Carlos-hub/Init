@@ -41,8 +41,6 @@ echo $media;
 
 // Exercicio 6 Calcular troco:
 
-<?php
-
 // Valores da compra e do pagamento
 $valorCompra = 127;
 $valorPago = 200;
