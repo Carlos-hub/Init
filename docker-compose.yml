@@ -1,0 +1,15 @@
+
+services:
+  php:
+    image: php:8.1-fpm
+    container_name: php_app
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
