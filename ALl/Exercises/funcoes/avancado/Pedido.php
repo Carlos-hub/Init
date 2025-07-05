@@ -64,3 +64,15 @@ function criarPedido($emailCliente, $itens) {
 
     echo "Pedido criado com sucesso para {$cliente['nome']}. Total: R$ " . number_format($totalComDesconto, 2, ',', '.') . "\n";
 }
+
+
+function mostrarPedidos() {
+    global $pedidos;
+    foreach ($pedidos as $pedido) {
+        echo "Cliente: {$pedido['cliente']['nome']}\n";
+        echo "Itens: \n";
+        foreach ($pedido['itens'] as $item) {
+            echo "  - {$item['nome']} (Quantidade: {$item['quantidade']})\n";
+        }
+    }
+}

@@ -7,9 +7,3 @@ services:
       - ./:/var/www/html
     ports:
       - "9000:9000"
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
